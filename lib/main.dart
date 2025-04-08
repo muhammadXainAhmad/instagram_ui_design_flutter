@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+import 'package:instagram_ui_design/Views/forgot.dart';
+import 'package:instagram_ui_design/Views/login.dart';
+import 'package:instagram_ui_design/Views/signup.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      initialRoute: "loginPage",
+      routes: {
+        "signup": (context) => const MySignupPage(),
+        "forgotPage": (context) => const MyForgotPage()
+      },
+
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyLoginPage(),
+    );
+  }
+}
