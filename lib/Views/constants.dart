@@ -21,4 +21,32 @@ class MyConstants {
   static const myBtnColor = Color.fromARGB(255, 10, 126, 221);
 
   static const myTxtColor = Color.fromARGB(179, 255, 255, 255);
+
+  List<String> languages = [
+    "Afrikaans",
+    "Chinese (中文 & 台灣)",
+    "Czech (Český)",
+    "Danish (Dansk)",
+    "Dutch (Nederlands)",
+    "English (US)",
+    "English (UK)",
+    "Finnish (Suomi)",
+    "French (Français)",
+    "German (Deutsch)",
+    "Greek (Ελληνικά)",
+    "Indonesian (Bahasa Indonesia)",
+    "Italian (Italiano)",
+    "Japanese (日本語)",
+    "Korean (한국어)",
+    "Malay (Bahasa Melayu)",
+    "Norwegian (Norsk)",
+    "Polish (Polski)",
+    "Portuguese (Português)",
+    "Russian (Русский)",
+    "Spanish (Español)",
+    "Swedish (Svenska)",
+    "Tagalog (Filipino)",
+    "Thai (ภาษาไทย)",
+    "Turkish (Türkçe)",
+  ];
 }

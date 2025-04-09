@@ -14,12 +14,12 @@ class _MyLoginPageState extends State<MyLoginPage> {
   String emailText = "";
   String passText = "";
   bool isPasswordHidden = true;
-
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(onTap: () {
-      FocusScope.of(context).requestFocus(FocusNode());
-    },
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).requestFocus(FocusNode());
+      },
       child: Scaffold(
         backgroundColor: MyConstants.myPrimaryColor,
         appBar: AppBar(
@@ -29,19 +29,125 @@ class _MyLoginPageState extends State<MyLoginPage> {
         body: Center(
           child: Column(
             children: [
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "English (UK)",
-                    style: TextStyle(color: MyConstants.myTxtColor, fontSize: 18),
-                  ),
-                  Icon(
-                    Icons.keyboard_arrow_down_rounded,
-                    color: MyConstants.myTxtColor,
-                    size: 32,
-                  ),
-                ],
+              TextButton(
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        decoration: BoxDecoration(
+                          color: MyConstants.myPrimaryColor,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(25),
+                            topRight: Radius.circular(25),
+                          ),
+                        ),
+                        height: 500,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Divider(
+                              color: MyConstants.myTxtColor,
+                              thickness: 5,
+                              indent: 180,
+                              endIndent: 180,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 8.0),
+                              child: IconButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                icon: Icon(
+                                  Icons.close,
+                                  size: 32,
+                                  color: MyConstants.myTxtColor,
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20.0),
+
+                              child: Text(
+                                "Select your language",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Expanded(
+                              child: Center(
+                                child: Container(
+                                  width: 370,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      width: 1,
+                                      color: MyConstants.myTxtColor,
+                                    ),
+                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(25),topRight: Radius.circular(25)),
+                                  ),
+                                  child: ListView.builder(
+                                    itemCount: MyConstants().languages.length,
+                                    itemBuilder: (context, index) {
+                                      return Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(14),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Text(
+                                                  MyConstants()
+                                                      .languages[index],
+                                                  style: TextStyle(
+                                                    fontSize: 18,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                                Icon(
+                                                  Icons.check_box_outline_blank,
+                                                  color: MyConstants.myTxtColor,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  );
+                },
+                style: TextButton.styleFrom(maximumSize: Size(200, 40)),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "English (UK)",
+                      style: TextStyle(
+                        color: MyConstants.myTxtColor,
+                        fontSize: 18,
+                      ),
+                    ),
+                    Icon(
+                      Icons.keyboard_arrow_down_rounded,
+                      color: MyConstants.myTxtColor,
+                      size: 32,
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 100),
               Image.asset("assets/instagramLogo.png", width: 70, height: 70),
@@ -96,7 +202,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                     labelStyle: const TextStyle(color: MyConstants.myTxtColor),
                     enabledBorder: MyConstants.myBorder,
                     focusedBorder: MyConstants.myBorder2,
-      
+
                     suffixIcon:
                         passText.isNotEmpty
                             ? IconButton(
@@ -163,7 +269,10 @@ class _MyLoginPageState extends State<MyLoginPage> {
                   ),
                   child: const Text(
                     "Create new account",
-                    style: TextStyle(color: MyConstants.myBtnColor, fontSize: 18),
+                    style: TextStyle(
+                      color: MyConstants.myBtnColor,
+                      fontSize: 18,
+                    ),
                   ),
                 ),
               ),
@@ -173,7 +282,10 @@ class _MyLoginPageState extends State<MyLoginPage> {
                   Image.asset("assets/metaLogo.png", width: 60, height: 60),
                   const Text(
                     "Meta",
-                    style: TextStyle(color: MyConstants.myBtnColor, fontSize: 18),
+                    style: TextStyle(
+                      color: MyConstants.myBtnColor,
+                      fontSize: 18,
+                    ),
                   ),
                 ],
               ),
