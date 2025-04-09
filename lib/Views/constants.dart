@@ -2,9 +2,19 @@ import 'package:flutter/material.dart';
 
 class MyConstants {
   static final myBorder = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15),
-      borderSide: const BorderSide(
-          color: Color.fromARGB(179, 255, 255, 255), width: 1));
+    borderRadius: BorderRadius.circular(15),
+    borderSide: const BorderSide(
+      color: Color.fromARGB(179, 255, 255, 255),
+      width: 1,
+    ),
+  );
+  static final myBorder2 = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(15),
+    borderSide: const BorderSide(
+      color: Color.fromRGBO(250, 250, 250, 1),
+      width: 1,
+    ),
+  );
 
   static const myPrimaryColor = Color.fromARGB(255, 29, 39, 49);
 
