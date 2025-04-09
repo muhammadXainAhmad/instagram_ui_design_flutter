@@ -23,27 +23,29 @@ class _MySignupPageState extends State<MySignupPage> {
             ),
             const SizedBox(height: 10,),
             const Text(
-              "You can always change it later",
+              "You can always change it later.",
               style: TextStyle(color: MyConstants.myTxtColor, fontSize: 18),
             ),
             const SizedBox(height: 10,),
             Padding(
-              padding: const EdgeInsets.all(12),
+              padding: const EdgeInsets.only(top: 12,bottom: 8,left: 32,right: 32),
               child: TextField(
                 style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   labelText: "Username",
                   labelStyle: const TextStyle(color: MyConstants.myTxtColor),
                   enabledBorder: MyConstants.myBorder,
-                  focusedBorder: MyConstants.myBorder,
+                  focusedBorder: MyConstants.myBorder2,
                 ),
               ),
             ),
             const SizedBox(height: 10,),
             Padding(
-              padding: const EdgeInsets.only(left: 12, right: 12, bottom: 10),
+              padding: const EdgeInsets.only(left: 32, right: 32),
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed("signupTwo");
+                  },
                   style: ElevatedButton.styleFrom(
                       minimumSize: const Size(double.infinity, 48),
                       backgroundColor: MyConstants.myBtnColor,

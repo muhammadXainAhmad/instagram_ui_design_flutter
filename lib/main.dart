@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_ui_design/Views/forgot.dart';
 import 'package:instagram_ui_design/Views/login.dart';
 import 'package:instagram_ui_design/Views/signup.dart';
+import 'package:instagram_ui_design/Views/signup_two.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "loginPage",
       routes: {
         "signup": (context) => const MySignupPage(),
+        "signupTwo": (context) => const MySignupPageTwo(),
         "forgotPage": (context) => const MyForgotPage()
       },
 
