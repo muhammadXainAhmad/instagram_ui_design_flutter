@@ -11,6 +11,8 @@ class MyForgotPage extends StatefulWidget {
 class _MyForgotPageState extends State<MyForgotPage> {
   final TextEditingController emailController = TextEditingController();
   String emailText = "";
+  String txtFieldText = "Email address or username";
+  String txtBtnText = "mobile number instead";
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +37,8 @@ class _MyForgotPageState extends State<MyForgotPage> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 8.0),
-                child: const Text(
-                  "Enter your email address or username",
+                child: Text(
+                  "Enter your ${txtFieldText.toLowerCase()}.",
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
@@ -58,7 +60,7 @@ class _MyForgotPageState extends State<MyForgotPage> {
                   },
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    labelText: "Email address or username",
+                    labelText: txtFieldText,
                     labelStyle: const TextStyle(color: MyConstants.myTxtColor),
                     enabledBorder: MyConstants.myBorder,
                     focusedBorder: MyConstants.myBorder2,
@@ -104,7 +106,15 @@ class _MyForgotPageState extends State<MyForgotPage> {
               ),
               TextButton(
                 onPressed: () {
-                  
+                  setState(() {
+                    if (txtFieldText == "Email address or username") {
+                      txtFieldText = "Mobile number";
+                      txtBtnText = "email address instead";
+                    } else {
+                      txtFieldText = "Email address or username";
+                      txtBtnText = "mobile number instead";
+                    }
+                  });
                 },
                 style: TextButton.styleFrom(
                   minimumSize: const Size(double.infinity, 48),
@@ -113,8 +123,8 @@ class _MyForgotPageState extends State<MyForgotPage> {
                     borderRadius: BorderRadius.circular(25),
                   ),
                 ),
-                child: const Text(
-                  "Search by mobile number instead",
+                child: Text(
+                  "Search by $txtBtnText",
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
