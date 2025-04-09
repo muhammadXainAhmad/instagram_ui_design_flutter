@@ -40,9 +40,8 @@ class _MyForgotPageState extends State<MyForgotPage> {
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
-              InkWell(onTap: () {
-                
-              },
+              InkWell(
+                onTap: () {},
                 child: const Text(
                   "Can't reset your password?",
                   style: TextStyle(color: MyConstants.myBtnColor, fontSize: 16),
@@ -87,7 +86,7 @@ class _MyForgotPageState extends State<MyForgotPage> {
                 style: TextStyle(color: MyConstants.myTxtColor, fontSize: 16),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 12, bottom: 12),
+                padding: const EdgeInsets.only(top: 16, bottom: 12),
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
@@ -103,13 +102,20 @@ class _MyForgotPageState extends State<MyForgotPage> {
                   ),
                 ),
               ),
-              Center(
-                child: TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    "Search by mobile number instead",
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+              TextButton(
+                onPressed: () {
+                  
+                },
+                style: TextButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 48),
+                  side: BorderSide(color: Color.fromARGB(179, 255, 255, 255)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25),
                   ),
+                ),
+                child: const Text(
+                  "Search by mobile number instead",
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
             ],
