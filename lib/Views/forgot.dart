@@ -40,21 +40,16 @@ class _MyForgotPageState extends State<MyForgotPage> {
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.zero,
-                  ),
-                  padding: EdgeInsets.all(0),
-                ),
-                onPressed: () {},
+              InkWell(onTap: () {
+                
+              },
                 child: const Text(
                   "Can't reset your password?",
                   style: TextStyle(color: MyConstants.myBtnColor, fontSize: 16),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 12, bottom: 12),
+                padding: const EdgeInsets.only(top: 18, bottom: 12),
                 child: TextField(
                   controller: emailController,
                   onChanged: (value) {
