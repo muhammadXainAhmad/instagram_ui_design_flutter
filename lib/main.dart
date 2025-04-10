@@ -4,6 +4,7 @@ import 'package:instagram_ui_design/Views/home.dart';
 import 'package:instagram_ui_design/Views/login.dart';
 import 'package:instagram_ui_design/Views/signup.dart';
 import 'package:instagram_ui_design/Views/signup_two.dart';
+import 'package:instagram_ui_design/Views/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyLoginPage(),
+      home: const SplashScreen(),
     );
   }
 }
