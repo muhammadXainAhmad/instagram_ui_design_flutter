@@ -10,8 +10,14 @@ A UI-only Instagram clone built with Flutter, featuring basic pages like login, 
 - **Bottom sheet** modal for language selection 🌐
 - **Navigation** setup for smooth transitions between pages 🔄
 - Centralized styling using constants for colors and input borders 🎨
+- **Splash screen** with SharedPreferences to manage user login state and navigate accordingly 🔐
 
 ## Screenshots 📸
+
+<h2>Splash Screen</h2>
+<p>
+  <img src="assets/splashScreen.png" width="200" height="auto" />
+</p>
 
 <h2>Login Page</h2>
 <p>
@@ -35,6 +41,15 @@ A UI-only Instagram clone built with Flutter, featuring basic pages like login, 
   <img src="assets/languageModal.png" width="200" height="auto" />
 </p>
 
+<h2>Home Page</h2>
+<p>
+  <img src="assets/homePage.png" width="200" height="auto" />
+</p>
+
+## SharedPreferences Navigation 💡
+- **Splash Screen** checks `isLoggedIn` in `SharedPreferences` to decide whether to show the Login page or Home screen.
+- After login, `isLoggedIn` is set to `true` in `SharedPreferences`.
+- On logout, `isLoggedIn` is set to `false`, redirecting users to the Login page on the next app launch.
 
 ## Notes 📝
 
