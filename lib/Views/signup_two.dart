@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_ui_design/Views/home.dart';
 import 'constants.dart';
 
 class MySignupPageTwo extends StatefulWidget {
@@ -78,7 +79,14 @@ class _MySignupPageTwoState extends State<MySignupPageTwo> {
           Padding(
             padding: const EdgeInsets.only(left: 32, right: 32),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                  (Route<dynamic> route) =>
+                      false, // Removes all previous routes
+                );
+              },
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 48),
                 backgroundColor: MyConstants.myBtnColor,

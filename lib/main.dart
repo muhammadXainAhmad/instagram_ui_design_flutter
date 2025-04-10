@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_ui_design/Views/forgot.dart';
+import 'package:instagram_ui_design/Views/home.dart';
 import 'package:instagram_ui_design/Views/login.dart';
 import 'package:instagram_ui_design/Views/signup.dart';
 import 'package:instagram_ui_design/Views/signup_two.dart';
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "signup": (context) => const MySignupPage(),
         "signupTwo": (context) => const MySignupPageTwo(),
-        "forgotPage": (context) => const MyForgotPage()
+        "forgotPage": (context) => const MyForgotPage(),
+        "homePage": (context) => const HomePage(),
       },
 
       title: 'Flutter Demo',

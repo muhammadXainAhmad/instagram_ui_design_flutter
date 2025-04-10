@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_ui_design/Views/home.dart';
 import 'constants.dart';
 
 class MyLoginPage extends StatefulWidget {
@@ -239,7 +240,12 @@ class _MyLoginPageState extends State<MyLoginPage> {
               Padding(
                 padding: const EdgeInsets.only(left: 12, right: 12, bottom: 10),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(double.infinity, 48),
                     backgroundColor: MyConstants.myBtnColor,
