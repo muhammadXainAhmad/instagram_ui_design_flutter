@@ -14,6 +14,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
   String emailText = "";
   String passText = "";
   bool isPasswordHidden = true;
+  String selectedLanguage = "English (UK)";
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -88,33 +89,45 @@ class _MyLoginPageState extends State<MyLoginPage> {
                                       width: 1,
                                       color: MyConstants.myTxtColor,
                                     ),
-                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(25),topRight: Radius.circular(25)),
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(25),
+                                      topRight: Radius.circular(25),
+                                    ),
                                   ),
                                   child: ListView.builder(
                                     itemCount: MyConstants().languages.length,
                                     itemBuilder: (context, index) {
                                       return Column(
                                         children: [
-                                          Padding(
-                                            padding: const EdgeInsets.all(14),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Text(
-                                                  MyConstants()
-                                                      .languages[index],
-                                                  style: TextStyle(
-                                                    fontSize: 18,
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                                Icon(
-                                                  Icons.check_box_outline_blank,
-                                                  color: MyConstants.myTxtColor,
-                                                ),
-                                              ],
+                                          ListTile(
+                                            onTap: () {
+                                              setState(() {
+                                                selectedLanguage =
+                                                    MyConstants()
+                                                        .languages[index];
+                                                Navigator.of(context).pop();
+                                              });
+                                            },
+                                            title: Text(
+                                              MyConstants().languages[index],
+                                              style: TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            trailing: Icon(
+                                              selectedLanguage ==
+                                                      MyConstants()
+                                                          .languages[index]
+                                                  ? Icons.check_box
+                                                  : Icons
+                                                      .check_box_outline_blank_outlined,
+                                              color:
+                                                  selectedLanguage ==
+                                                          MyConstants()
+                                                              .languages[index]
+                                                      ? MyConstants.myBtnColor
+                                                      : MyConstants.myTxtColor,
                                             ),
                                           ),
                                         ],
@@ -130,12 +143,12 @@ class _MyLoginPageState extends State<MyLoginPage> {
                     },
                   );
                 },
-                style: TextButton.styleFrom(maximumSize: Size(200, 40)),
-                child: const Row(
+                style: TextButton.styleFrom(),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "English (UK)",
+                      selectedLanguage,
                       style: TextStyle(
                         color: MyConstants.myTxtColor,
                         fontSize: 18,
