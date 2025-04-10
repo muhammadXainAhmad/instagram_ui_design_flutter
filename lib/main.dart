@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_ui_design/Views/forgot.dart';
 import 'package:instagram_ui_design/Views/home.dart';
-import 'package:instagram_ui_design/Views/login.dart';
 import 'package:instagram_ui_design/Views/signup.dart';
 import 'package:instagram_ui_design/Views/signup_two.dart';
 import 'package:instagram_ui_design/Views/splash_screen.dart';

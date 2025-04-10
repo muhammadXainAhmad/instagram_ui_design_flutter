@@ -1,7 +1,10 @@
 import 'dart:async';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram_ui_design/Views/constants.dart';
+import 'package:instagram_ui_design/Views/home.dart';
 import 'package:instagram_ui_design/Views/login.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -11,6 +14,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class SplashScreenState extends State<SplashScreen> {
+  static const String KEYLOGIN = "login";
   @override
   void initState() {
     super.initState();
@@ -48,12 +52,29 @@ class SplashScreenState extends State<SplashScreen> {
     );
   }
 
-  void whereToGo() {
+  void whereToGo() async {
+    var sharedPref = await SharedPreferences.getInstance();
+    var isLoggedIn = sharedPref.getBool(KEYLOGIN);
     Timer(Duration(seconds: 2), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => MyLoginPage()),
-      );
+      if (isLoggedIn != null) {
+        if (isLoggedIn) {
+          
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => HomePage()),
+          );
+        } else {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => MyLoginPage()),
+          );
+        }
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => MyLoginPage()),
+        );
+      }
     });
   }
 }

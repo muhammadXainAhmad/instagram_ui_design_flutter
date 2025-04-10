@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_ui_design/Views/constants.dart';
 import 'package:instagram_ui_design/Views/login.dart';
+import 'package:instagram_ui_design/Views/splash_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -33,7 +35,9 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.only(left: 12, right: 12, bottom: 10),
               child: ElevatedButton(
-                onPressed: () {
+                onPressed: () async {
+                  var sharedPref = await SharedPreferences.getInstance();
+                  sharedPref.setBool(SplashScreenState.KEYLOGIN, false);
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(builder: (context) => MyLoginPage()),
