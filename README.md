@@ -1,16 +1,23 @@
-# instagram_ui_design
+# Instagram UI Clone (Flutter) 📱✨
 
-A new Flutter project.
+A UI-only Instagram clone built with Flutter, featuring basic pages like login, signup, and password recovery. The project includes **navigation** between screens and focuses on replicating the look and feel of Instagram's mobile app interface. 🔄
 
-## Getting Started
+## 🚀 Features
+- Modern Instagram-style dark-themed UI
+- Instagram-style **login page** 🔑 
+- **Signup page** to choose a username & password ✍️
+- **Forgot password** page for instagram account recovery 🔒
+- **Navigation** setup for smooth transitions between pages 🔄
+- Centralized styling using constants for colors and input borders 🎨
 
-This project is a starting point for a Flutter application.
+## Screenshots 📸
 
-A few resources to get you started if this is your first Flutter project:
+![Login Page](assets/loginPage.png)
+![Signup Page](assets/signupPage.png)
+![Forgot Password Page](assets/forgotPage.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Notes 📝
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- This project currently focuses on the **UI design** with no backend functionality.
+- A learning project to practice Flutter UI components and basic navigation.
+- **Future enhancements** could include form validation, state management, and backend integration with Firebase for user authentication.
