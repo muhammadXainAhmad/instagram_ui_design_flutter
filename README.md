@@ -1,6 +1,6 @@
 # Instagram UI Clone (Flutter) 📱✨
 
-A UI-only Instagram clone built with Flutter, featuring basic pages like login, signup, and password recovery. The project includes **navigation** between screens and focuses on replicating the look and feel of Instagram's mobile app interface. 🔄
+A UI-only Instagram clone built with Flutter, featuring basic pages like login, signup, and password recovery. The project includes a splash screen and shared preferences for managing the login state. It also supports navigation between screens, replicating the look and feel of Instagram's mobile app interface.
 
 ## Features 🚀
 - Modern Instagram-style dark-themed UI
@@ -10,7 +10,7 @@ A UI-only Instagram clone built with Flutter, featuring basic pages like login, 
 - **Bottom sheet** modal for language selection 🌐
 - **Navigation** setup for smooth transitions between pages 🔄
 - Centralized styling using constants for colors and input borders 🎨
-- **Splash screen** with SharedPreferences to manage user login state and navigate accordingly 🔐
+- **Splash screen** with **SharedPreferences** to manage user login state and navigate accordingly 🔐
 
 ## Screenshots 📸
 
