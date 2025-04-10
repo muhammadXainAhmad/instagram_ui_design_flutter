@@ -15,7 +15,7 @@ A UI-only Instagram clone built with Flutter, featuring basic pages like login, 
 
 <h2>Login Page</h2>
 <p>
-  <img src="assets/loginPage1.png" width="200" height="auto" />
+  <img src="assets/loginPage.png" width="200" height="auto" />
 </p>
 
 <h2>Signup Pages</h2>
@@ -32,7 +32,7 @@ A UI-only Instagram clone built with Flutter, featuring basic pages like login, 
 
 <h2>Language Modal</h2>
 <p>
-  <img src="assets/languageModal1.png" width="200" height="auto" />
+  <img src="assets/languageModal.png" width="200" height="auto" />
 </p>
 
 
