@@ -13,12 +13,28 @@ A UI-only Instagram clone built with Flutter, featuring basic pages like login, 
 
 ## Screenshots 📸
 
-![Login Page](assets/loginPage1.png)
-![Signup Page One](assets/signupPage1.png)
-![Signup Page Two](assets/signupPage2.png)
-![Forgot Password Page One](assets/forgotPage1.png)
-![Forgot Password Page Two](assets/forgotPage2.png)
-![Language Bottom Sheet](assets/languageModal1.png)
+<h2>Login Page</h2>
+<p>
+  <img src="assets/loginPage1.png" width="200" height="auto" />
+</p>
+
+<h2>Signup Pages</h2>
+<p>
+  <img src="assets/signupPage1.png" width="200" height="auto" />
+  <img src="assets/signupPage2.png" width="200" height="auto" />
+</p>
+
+<h2>Forgot Password Pages</h2>
+<p>
+  <img src="assets/forgotPage1.png" width="200" height="auto" />
+  <img src="assets/forgotPage2.png" width="200" height="auto" />
+</p>
+
+<h2>Language Modal</h2>
+<p>
+  <img src="assets/languageModal1.png" width="200" height="auto" />
+</p>
+
 
 ## Notes 📝
 
