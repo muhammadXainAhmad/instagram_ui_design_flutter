@@ -16,34 +16,34 @@ A UI-only Instagram clone built with Flutter, featuring basic pages like login, 
 
 <h2>Splash Screen</h2>
 <p>
-  <img src="assets/splashScreen.png" width="200" height="auto" />
+  <img src="assets/splashScreen.png" width="300"/>
 </p>
 
 <h2>Login Page</h2>
 <p>
-  <img src="assets/loginPage.png" width="200" height="auto" />
+  <img src="assets/loginPage.png" width="300"/>
 </p>
 
 <h2>Signup Pages</h2>
 <p>
-  <img src="assets/signupPage1.png" width="200" height="auto" />
-  <img src="assets/signupPage2.png" width="200" height="auto" />
+  <img src="assets/signupPage1.png" width="300"/>
+  <img src="assets/signupPage2.png" width="300"/>
 </p>
 
 <h2>Forgot Password Pages</h2>
 <p>
-  <img src="assets/forgotPage1.png" width="200" height="auto" />
-  <img src="assets/forgotPage2.png" width="200" height="auto" />
+  <img src="assets/forgotPage1.png" width="300"/>
+  <img src="assets/forgotPage2.png" width="300"/>
 </p>
 
 <h2>Language Modal</h2>
 <p>
-  <img src="assets/languageModal.png" width="200" height="auto" />
+  <img src="assets/languageModal.png" width="300"/>
 </p>
 
 <h2>Home Page</h2>
 <p>
-  <img src="assets/homePage.png" width="200" height="auto" />
+  <img src="assets/homePage.png" width="300"/>
 </p>
 
 ## SharedPreferences Navigation 💡
@@ -54,7 +54,7 @@ A UI-only Instagram clone built with Flutter, featuring basic pages like login, 
 ## Notes 📝
 
 - This project currently focuses on the **UI design** with no backend functionality.
-- A learning project to practice Flutter UI components and basic navigation.
+- A learning project to practice Flutter UI components and basic navigation with SharedPreferences.
 - **Future enhancements** could include form validation, state management, and backend integration with Firebase for user authentication.
 
 ## Tech Stack ⚙️
